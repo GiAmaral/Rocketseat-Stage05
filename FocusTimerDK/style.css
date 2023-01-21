@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-timer: 'Roboto', sans-serif;
+
+    --button-sound-color: #E1E1E6;
+    --button-sound-color-active: #02799D;
+    --white-color: #FFF;
+    --gray-color: #323238;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--white-color);
+}
+
+.dark {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.background-mode {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 19.2rem;
+    width: 82.1rem;
+}
+
+.timer-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem 4rem;
+}
+
+.timer {
+    grid-column: 1 / 5;
+    font-family: var(--font-timer);
+    font-weight: 500;
+    font-size: 12.61rem;
+    line-height: 14.8rem;
+    text-transform: uppercase;
+    color: var(--gray-color);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.sounds-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.sound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    width: 13.8rem;
+    height: 15.2rem;
+    background-color: var(--button-sound-color);
+    border-radius: 2.4rem;
+}
+
+.sound.active {
+    background-color: var(--button-sound-color-active);
+}
+
+.sound.active path {
+    fill: var(--white-color);
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--gray-color);
+    border-radius: 0.5rem;
+    width: 9rem;
+    height: 0.4rem;
+    cursor: pointer;
+}
+
+.sound.active input {
+    background: var(--white-color);
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 5rem;
+    background: var(--gray-color);
+}
+
+.sound.active input::-webkit-slider-thumb {
+    background: var(--white-color);
+}

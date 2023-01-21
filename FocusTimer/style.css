@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-timer: 'Roboto', sans-serif;
+    --bg-color: #FFF;
+    --bg-text-color: #323238;
+    --button-sound-color: #E1E1E6;
+    --button-sound-color-active: #02799D;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--bg-text-color);
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 19.8rem;
+    width: 82.7rem;
+}
+
+.timer-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem 4rem;
+}
+
+.timer {
+    grid-column: 1 / 5;
+    font-family: var(--font-timer);
+    font-weight: 500;
+    font-size: 12.61rem;
+    line-height: 14.8rem;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.sounds-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.sound {
+    width: 13.8rem;
+    height: 15.2rem;
+    background-color: var(--button-sound-color);
+    border-radius: 2.4rem;
+}
+
+.sound.active {
+    background-color: var(--button-sound-color-active);
+}
+
+.sound.active path {
+    fill: #FFF;
+}
